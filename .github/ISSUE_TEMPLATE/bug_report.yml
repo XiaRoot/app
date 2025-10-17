@@ -1,0 +1,81 @@
+name: 🐛 Bug Report
+about: Report a bug or issue in XiaRoot App
+title: "[BUG] "
+labels: bug
+assignees: ''
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report Instructions
+        Thanks for taking the time to report a bug! Please fill out all required fields.
+        Proper details help us reproduce and fix the issue faster. 🚀
+
+  - type: input
+    id: device_model
+    attributes:
+      label: Xiaomi Device Model
+      placeholder: "e.g. Mi 11 Ultra"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os_type
+    attributes:
+      label: Operating System
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: input
+    id: xiaroot_version
+    attributes:
+      label: XiaRoot Version
+      placeholder: "e.g. 0.1.0-beta"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "Describe the steps to reproduce the bug, step by step."
+      placeholder: |
+        1. 
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: "What you expected to happen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      placeholder: "What actually happened"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_modules
+    attributes:
+      label: Affected Modules
+      description: "Select all modules affected by this bug."
+      options:
+        - label: ROM Flashing
+        - label: Fastboot
+        - label: Backup/Restore
+        - label: Other
+    validations:
+      required: true
